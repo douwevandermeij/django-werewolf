@@ -1,0 +1,8 @@
+{% extends "reversion/change_list.html" %}
+{% load i18n %}
+
+
+{% block object-tools-items %}
+    <li><a href="{{ sync_url }}">{% blocktrans with cl.opts.verbose_name_plural|escape as name %}Synchronize {{name}}{% endblocktrans %}</a></li>
+    {{block.super}}
+{% endblock %}
